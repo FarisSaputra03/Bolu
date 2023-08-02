@@ -13,9 +13,24 @@ const Blog = () => {
           </h1>
         </div>
         <div className='flex flex-wrap -m-4 '>
-          <div className='p-4  md:w-1/3'>
-            <div className='h-full border-2 card hover:shadow border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
-              <Image width={720} height={400} src='/img/hotel.jpeg' alt='' />
+          <div className='group p-4 w-72'>
+            <div className='h-full border-2 group-hover:scale-110  card hover:shadow border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
+              <div className='w-full '>
+                <Image
+                  width={0}
+                  height={0}
+                  src='/img/hotel.jpeg'
+                  alt=''
+                  sizes='1000vw'
+                  style={{
+                    objectPosition: 'center',
+                    objectFit: 'cover',
+                    height: 'auto',
+                    width: '100%',
+                  }}
+                />
+              </div>
+
               <div className='p-6'>
                 <h2 className='tracking-widest text-xs title-font font-medium text-gray-400 mb-1'>
                   Lifestyle . 09 Jul 2023
@@ -73,7 +88,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className='p-4 md:w-1/3'>
+          <div className='p-4  w-72'>
             <div className='h-full border-2 card hover:shadow border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
               <Image width={720} height={400} src='/img/wisata.jpeg' alt='' />
 
@@ -134,7 +149,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className='p-4  md:w-1/3'>
+          <div className='p-4 w-72 '>
             <div className='h-full border-2 border-gray-200 card hover:shadow border-opacity-60 rounded-lg overflow-hidden'>
               <Image width={720} height={400} src='/img/perpus.jpeg' alt='' />
 

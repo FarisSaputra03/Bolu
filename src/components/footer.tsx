@@ -8,11 +8,28 @@ import { BsInstagram } from 'react-icons/bs';
 const Footer = () => {
   return (
     <footer className='text-gray-600 body-font'>
-      <div className='container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
-        <div className='w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
-          <div className='flex-grow flex flex-wrap md:pl-20 md:mt-0 mt-10 md:text-left min-w-full text-center'>
-            <Image width={116} height={48} src='/img/jogja.jpeg' alt='' />
+      <div className='container px-5 py-24 mx-auto  md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
+        <div className='flex w-full pb-10 justify-between'>
+          <div className=' w-full mb-5  divide-y gap-y-5  divide-dashed md:pl-20 text-center'>
+            <Image
+              className='mb-3'
+              width={116}
+              height={48}
+              src='/img/jogja.jpeg'
+              alt=''
+            />
+            <hr className='w-full' />
           </div>
+
+          <Image
+            className='pb-6'
+            width={200}
+            height={48}
+            src='/img/tugu.jpeg'
+            alt=''
+          />
+        </div>
+        <div className='w-64  md:mx-0 mx-auto text-center md:text-left'>
           <div className='flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center'>
             <nav className='list-none mb-10'>
               <li>
@@ -63,10 +80,9 @@ const Footer = () => {
           </nav>
         </div>
         <div className=''>
-        <Image width={200} height={200} src='/img/tugu.jpeg' alt='' />
-        <div className='flex pt-5 space-x-4 text-amber-800 justify-center my-0'>
-        <FiFacebook size='2rem' /> <BsInstagram size='2rem' /> 
-        </div>
+          <div className='flex pt-5 space-x-4 text-amber-800 justify-center my-0'>
+            <FiFacebook size='2rem' /> <BsInstagram size='2rem' />
+          </div>
         </div>
       </div>
       <div className='bg-gray-100'>

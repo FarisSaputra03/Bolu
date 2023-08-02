@@ -1,10 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 const Content = () => {
+  const [selectedTitle, setSelectedTitle] = useState('');
+
   return (
     <section className='text-gray-600 body-font'>
       <div className='container px-5 py-8 mx-auto'>
@@ -20,8 +22,15 @@ const Content = () => {
             role='tablist'
           >
             <button
+              onClick={() => {
+                setSelectedTitle('Bakpia Kukus');
+              }}
               type='button'
-              className='font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active'
+              className={`font-bold px-5 rounded-full  hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap  ${
+                selectedTitle == 'Bakpia Kukus'
+                  ? 'bg-amber-900 text-amber-100'
+                  : 'bg-amber-100 text-amber-900'
+              }  active`}
               id='horizontal-alignment-item-1'
               data-hs-tab='#horizontal-alignment-1'
               aria-controls='horizontal-alignment-1'
@@ -30,8 +39,15 @@ const Content = () => {
               Bakpia Kukus
             </button>
             <button
+              onClick={() => {
+                setSelectedTitle('Bolu Kukus');
+              }}
               type='button'
-              className='font-bold rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900'
+              className={`font-bold px-5  rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap ${
+                selectedTitle == 'Bolu Kukus'
+                  ? 'bg-amber-900 text-amber-100'
+                  : 'bg-amber-100 text-amber-900'
+              }`}
               id='horizontal-alignment-item-2'
               data-hs-tab='#horizontal-alignment-2'
               aria-controls='horizontal-alignment-2'
@@ -41,7 +57,7 @@ const Content = () => {
             </button>
             <button
               type='button'
-              className='font-bold rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900'
+              className='font-bold px-5  rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900'
               id='horizontal-alignment-item-3'
               data-hs-tab='#horizontal-alignment-3'
               aria-controls='horizontal-alignment-3'
@@ -63,28 +79,40 @@ const Content = () => {
         >
           <SwiperSlide>
             <div className='card hover:shadow '>
-            <Image width={720} height={400} src='/img/kukus1.jpeg' alt='' />
+              <Image width={720} height={400} src='/img/kukus1.jpeg' alt='' />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='card hover:shadow w-64 hover:w-72 '>
+              <Image
+                width={0}
+                height={0}
+                src='/img/kukus2.jpeg'
+                alt=''
+                sizes='1000vw'
+                style={{
+                  objectPosition: 'center',
+                  objectFit: 'cover',
+                  height: 'auto',
+                  width: '100%',
+                }}
+              />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className='card hover:shadow'>
-            <Image width={720} height={400} src='/img/kukus2.jpeg' alt='' />
+              <Image width={720} height={400} src='/img/kukus3.jpeg' alt='' />
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className='card hover:shadow'>
-          <Image width={720} height={400} src='/img/kukus3.jpeg' alt='' />
-          </div>
+              <Image width={720} height={400} src='/img/kukus4.jpeg' alt='' />
+            </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className='card hover:shadow'>
-          <Image width={720} height={400} src='/img/kukus4.jpeg' alt='' />
-          </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='card hover:shadow'>
-          <Image width={720} height={400} src='/img/kukus5.jpeg' alt='' />
-          </div>
+              <Image width={720} height={400} src='/img/kukus5.jpeg' alt='' />
+            </div>
           </SwiperSlide>
         </Swiper>
         <div
