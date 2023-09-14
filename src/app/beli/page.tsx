@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
@@ -7,6 +8,7 @@ import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 export default function Beli() {
+  const [jumlahBeli, setJumlahBeli] = useState<number>(1);
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -63,13 +65,25 @@ export default function Beli() {
                   <h1 className="font-semibold text-start text-sm py-5">Kuantitas</h1>
                   <div className="flex gap-1 items-center justify-between">
                     <div className="flex gap-5 items-center ">
-                    <AiOutlineMinus/>
-                    <p>1</p>
+                      <div 
+                     onClick={() => {
+                      if (jumlahBeli > 1) {
+                        setJumlahBeli(jumlahBeli - 1);
+                      }
+                    }}>
+                      <AiOutlineMinus/>
+                      </div>
+                    <p>{jumlahBeli}</p>
+                    <div 
+                    onClick={() => {
+                      setJumlahBeli(jumlahBeli + 1);
+                    }}>
                     <AiOutlinePlus/>
+                    </div>
                     </div>
                     <div className="flex gap-3">
                       <p>Stok</p>
-                      <p>0</p>
+                      <p>20</p>
                     </div>
                   </div>
                 </div>
