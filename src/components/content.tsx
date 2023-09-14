@@ -3,24 +3,30 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import Link from "next/link";
 import "swiper/css";
 const Content = () => {
-  const [selectedTitle, setSelectedTitle] = useState("");
+  const [selectedTitle, setSelectedTitle] = useState("Bakpia Kukus");
   const listFoto = [
     {
       img: "/img/kukus1.jpeg",
+      href: "/beli",
     },
     {
       img: "/img/kukus2.jpeg",
+      href: "/beli",
     },
     {
       img: "/img/kukus3.jpeg",
+      href: "/beli",
     },
     {
       img: "/img/kukus4.jpeg",
+      href: "/beli",
     },
     {
       img: "/img/kukus5.jpeg",
+      href: "/beli",
     },
   ];
   return (
@@ -100,15 +106,14 @@ const Content = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          <div className="">
+          <div>
             {listFoto.map((data: any, index) => (
-              <SwiperSlide 
-              key={index+1}
-              className="card hover:shadow flex ">
-                <Image width={720} height={400} src={data.img} alt="" />
+              <SwiperSlide key={index + 1} className="card hover:shadow flex ">
+                <Image width={720} height={400} src={data.img} alt="bakpia" />
               </SwiperSlide>
             ))}
           </div>
+
           {/* <SwiperSlide>
             <div className="card hover:shadow ">
               <Image width={720} height={400} src="/img/kukus2.jpeg" alt="" />
