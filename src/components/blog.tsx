@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import "swiper/css";
+import Link from "next/link";
 const Blog = () => {
   const listBlog = [
     {
@@ -192,9 +193,11 @@ const Blog = () => {
             </div>
           </div> */}
         </div>
+        <Link href={"/artikel"}>
         <button className="flex mx-auto mt-20 rounded-full text-white font-bold bg-amber-950 border-0 py-2 px-8 focus:outline-none hover:bg-amber-900 text-lg">
           Lihat Semua Artikel
         </button>
+        </Link>
       </div>
     </section>
   );
