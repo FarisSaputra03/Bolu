@@ -14,7 +14,7 @@ const Page = () => {
       listContent: [
         {
           id: 1,
-          img2: "/img/kuliner2.jpeg",
+          img2: "/img/kuliner.jpeg",
           date2: "· 09 Aug 2022",
           desc: "Suwatu by Mil and Bay: Lebih dari Sekadar Wiasata Kuliner",
         },
@@ -26,56 +26,101 @@ const Page = () => {
         },
       ],
     },
-    // {
-    //   categori: "Travel",
-    //   img: "/img/travel.jpeg",
-    //   date: "· 09 Aug 2022",
-    //   description: " Monumen Jogja Kembali: Daya Tarik, Sejarah, dan Harga Tiket",
-
-    //   img2: "/img/travel2.jpeg",
-    //   date2: "· 03 Aug 2022",
-    //   desc: " The Lost Word Castle, Wisata Negeri Dongeng di Yogyakarta",
-    // },
-    // {
-    //   categori: "Experience",
-    //   img: "/img/experience.jpeg",
-    //   date: "· 28 Jun 2022",
-    //   description: " 4 Tempat Dinner Romantis di Jogja yang Syahdu",
-
-    //   img2: "/img/experience2.jpeg",
-    //   date2: "· 19 May 2022",
-    //   desc: "7 Rekomendasi Board Game untuk Mengisi Liburan di Rumah",
-    // },
-    // {
-    //   categori: " Shopping",
-    //   img: "/img/experience.jpeg",
-    //   date: " · 24 Jun 2022",
-    //   description: "Bakpia Kukus Tugu Buka di PRJ 2022, Jangan Sampai Kelewatan!",
-
-    //   img2: "/img/shoping2.jpeg",
-    //   date2: "· 01 Jun 2022",
-    //   desc: " 8 Toko Kosmetik dengan Harga Terjangkau di Yogyakarta",
-    // },
-    // {
-    //   categori: "Lifestyle",
-    //   img: "/img/life.jpeg",
-    //   date: " · 13 Jul 2022",
-    //   description: "7 Tips dan Cara Program Hamil Agar Punya Momongan",
-
-    //   img2: "/img/life2.jpeg",
-    //   date2: " · 13 Jul 2022",
-    //   desc: "  Bikin Bugar, Simak 7 Manfaat Bersepeda Bagi Kesehatan",
-    // },
-    // {
-    //   categori: " Family",
-    //   img: "/img/family.jpeg",
-    //   date: "· 19 May 2022",
-    //   description: " Lebaran Anti Bosan, Walaupun di Rumah Saja",
-
-    //   img2: "/img/family2.jpeg",
-    //   date2: " · 09 Mar 2022",
-    //   desc: " Apa Itu Montessori? Kenali Manfaat dan Prinsipnya",
-    // },
+    {
+      id: 2,
+      categori: "Travel",
+      // img: "/img/travel.jpeg",
+      // date: "· 09 Aug 2022",
+      // description: " Monumen Jogja Kembali: Daya Tarik, Sejarah, dan Harga Tiket",
+      listContent: [
+        {
+          id: 3,
+          img2: "/img/travel.jpeg",
+          date2: "· 09 Aug 2022",
+          desc:
+            " Monumen Jogja Kembali: Daya Tarik, Sejarah, dan Harga Tiket",
+        },
+        {
+          id: 4,
+          img2: "/img/travel2.jpeg",
+          date2: "· 03 Aug 2022",
+          desc: " The Lost Word Castle, Wisata Negeri Dongeng di Yogyakarta",
+        },
+      ],
+    },
+    {
+      id: 3,
+      categori: "Experience",
+      listContent: [
+        {
+          id: 5,
+          img2: "/img/experience.jpeg",
+          date2: "· 28 Jun 2022",
+          desc: " 4 Tempat Dinner Romantis di Jogja yang Syahdu",
+        },
+        {
+          id: 6,
+          img2: "/img/experience2.jpeg",
+          date2: "· 19 May 2022",
+          desc: "7 Rekomendasi Board Game untuk Mengisi Liburan di Rumah",
+        },
+      ],
+    },
+    {
+      id: 4,
+      categori: " Shopping",
+      listContent: [
+        {
+          id: 7,
+          img2: "/img/experience.jpeg",
+          date2: " · 24 Jun 2022",
+          desc:
+            "Bakpia Kukus Tugu Buka di PRJ 2022, Jangan Sampai Kelewatan!",
+        },
+        {
+          id: 8,
+          img2: "/img/shoping2.jpeg",
+          date2: "· 01 Jun 2022",
+          desc: " 8 Toko Kosmetik dengan Harga Terjangkau di Yogyakarta",
+        },
+      ],
+    },
+    {
+      id: 5,
+      categori: "Lifestyle",
+      listContent: [
+        {
+          id: 9,
+          img2: "/img/life.jpeg",
+          date2: " · 13 Jul 2022",
+          desc: "7 Tips dan Cara Program Hamil Agar Punya Momongan",
+        },
+        {
+          id: 10,
+          img2: "/img/life2.jpeg",
+          date2: " · 13 Jul 2022",
+          desc: "  Bikin Bugar, Simak 7 Manfaat Bersepeda Bagi Kesehatan",
+        },
+      ],
+    },
+    {
+      id: 6,
+      categori: " Family",
+      listContent: [
+        {
+          id: 11,
+          img2: "/img/family.jpeg",
+          date2: "· 19 May 2022",
+          desc: " Lebaran Anti Bosan, Walaupun di Rumah Saja",
+        },
+        {
+          id:12,
+          img2: "/img/family2.jpeg",
+          date2: " · 09 Mar 2022",
+          desc: " Apa Itu Montessori? Kenali Manfaat dan Prinsipnya",
+        },
+      ],
+    },
   ];
   const listArticle = [
     {
