@@ -1,67 +1,81 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const Page = () => {
   const listBlog = [
     {
-      title: "Culinary",
-      img: "/img/kuliner.jpeg",
-      date: "· 09 Aug 2022",
-      description: "Carney Co: Keunikan, Harga Menu, dan Lokasi",
-
-      img2: "/img/kuliner2.jpeg",
-      date2: "· 09 Aug 2022",
-      desc: "Suwatu by Mil and Bay: Lebih dari Sekadar Wiasata Kuliner",
+      id: 1,
+      categori: "Culinary",
+      // img: "/img/kuliner.jpeg",
+      // date: "· 09 Aug 2022",
+      // description: "Carney Co: Keunikan, Harga Menu, dan Lokasi",
+      // href:"/detailartikel",
+      listContent: [
+        {
+          id: 1,
+          img2: "/img/kuliner2.jpeg",
+          date2: "· 09 Aug 2022",
+          desc: "Suwatu by Mil and Bay: Lebih dari Sekadar Wiasata Kuliner",
+        },
+        {
+          id: 2,
+          img2: "/img/kuliner2.jpeg",
+          date2: "· 09 Aug 2022",
+          desc: "Suwatu by Mil and Bay: Lebih dari Sekadar Wiasata Kuliner",
+        },
+      ],
     },
-    {
-      title: "Travel",
-      img: "/img/travel.jpeg",
-      date: "· 09 Aug 2022",
-      description: " Monumen Jogja Kembali: Daya Tarik, Sejarah, dan Harga Tiket",
+    // {
+    //   categori: "Travel",
+    //   img: "/img/travel.jpeg",
+    //   date: "· 09 Aug 2022",
+    //   description: " Monumen Jogja Kembali: Daya Tarik, Sejarah, dan Harga Tiket",
 
-      img2: "/img/travel2.jpeg",
-      date2: "· 03 Aug 2022",
-      desc: " The Lost Word Castle, Wisata Negeri Dongeng di Yogyakarta",
-    },
-    {
-      title: "Experience",
-      img: "/img/experience.jpeg",
-      date: "· 28 Jun 2022",
-      description: " 4 Tempat Dinner Romantis di Jogja yang Syahdu",
+    //   img2: "/img/travel2.jpeg",
+    //   date2: "· 03 Aug 2022",
+    //   desc: " The Lost Word Castle, Wisata Negeri Dongeng di Yogyakarta",
+    // },
+    // {
+    //   categori: "Experience",
+    //   img: "/img/experience.jpeg",
+    //   date: "· 28 Jun 2022",
+    //   description: " 4 Tempat Dinner Romantis di Jogja yang Syahdu",
 
-      img2: "/img/experience2.jpeg",
-      date2: "· 19 May 2022",
-      desc: "7 Rekomendasi Board Game untuk Mengisi Liburan di Rumah",
-    },
-    {
-      title: " Shopping",
-      img: "/img/experience.jpeg",
-      date: " · 24 Jun 2022",
-      description: "Bakpia Kukus Tugu Buka di PRJ 2022, Jangan Sampai Kelewatan!",
+    //   img2: "/img/experience2.jpeg",
+    //   date2: "· 19 May 2022",
+    //   desc: "7 Rekomendasi Board Game untuk Mengisi Liburan di Rumah",
+    // },
+    // {
+    //   categori: " Shopping",
+    //   img: "/img/experience.jpeg",
+    //   date: " · 24 Jun 2022",
+    //   description: "Bakpia Kukus Tugu Buka di PRJ 2022, Jangan Sampai Kelewatan!",
 
-      img2: "/img/shoping2.jpeg",
-      date2: "· 01 Jun 2022",
-      desc: " 8 Toko Kosmetik dengan Harga Terjangkau di Yogyakarta",
-    },
-    {
-      title: "Lifestyle",
-      img: "/img/life.jpeg",
-      date: " · 13 Jul 2022",
-      description: "7 Tips dan Cara Program Hamil Agar Punya Momongan",
+    //   img2: "/img/shoping2.jpeg",
+    //   date2: "· 01 Jun 2022",
+    //   desc: " 8 Toko Kosmetik dengan Harga Terjangkau di Yogyakarta",
+    // },
+    // {
+    //   categori: "Lifestyle",
+    //   img: "/img/life.jpeg",
+    //   date: " · 13 Jul 2022",
+    //   description: "7 Tips dan Cara Program Hamil Agar Punya Momongan",
 
-      img2: "/img/life2.jpeg",
-      date2: " · 13 Jul 2022",
-      desc: "  Bikin Bugar, Simak 7 Manfaat Bersepeda Bagi Kesehatan",
-    },
-    {
-      title: " Family",
-      img: "/img/family.jpeg",
-      date: "· 19 May 2022",
-      description: " Lebaran Anti Bosan, Walaupun di Rumah Saja",
+    //   img2: "/img/life2.jpeg",
+    //   date2: " · 13 Jul 2022",
+    //   desc: "  Bikin Bugar, Simak 7 Manfaat Bersepeda Bagi Kesehatan",
+    // },
+    // {
+    //   categori: " Family",
+    //   img: "/img/family.jpeg",
+    //   date: "· 19 May 2022",
+    //   description: " Lebaran Anti Bosan, Walaupun di Rumah Saja",
 
-      img2: "/img/family2.jpeg",
-      date2: " · 09 Mar 2022",
-      desc: " Apa Itu Montessori? Kenali Manfaat dan Prinsipnya",
-    },
+    //   img2: "/img/family2.jpeg",
+    //   date2: " · 09 Mar 2022",
+    //   desc: " Apa Itu Montessori? Kenali Manfaat dan Prinsipnya",
+    // },
   ];
   const listArticle = [
     {
@@ -138,64 +152,64 @@ const Page = () => {
               Culinary
             </button>
             <div>
-            <button
-              type="button"
-              className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
-              id="horizontal-alignment-item-3"
-              data-hs-tab="#horizontal-alignment-3"
-              aria-controls="horizontal-alignment-3"
-              role="tab"
-            >
-              Travel
-            </button>
+              <button
+                type="button"
+                className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
+                id="horizontal-alignment-item-3"
+                data-hs-tab="#horizontal-alignment-3"
+                aria-controls="horizontal-alignment-3"
+                role="tab"
+              >
+                Travel
+              </button>
             </div>
             <div className="hidden space-x-8 sm:flex">
-            <button
-              type="button"
-              className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
-              id="horizontal-alignment-item-3"
-              data-hs-tab="#horizontal-alignment-3"
-              aria-controls="horizontal-alignment-3"
-              role="tab"
-            >
-              Experience
-            </button>
+              <button
+                type="button"
+                className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
+                id="horizontal-alignment-item-3"
+                data-hs-tab="#horizontal-alignment-3"
+                aria-controls="horizontal-alignment-3"
+                role="tab"
+              >
+                Experience
+              </button>
             </div>
             <div className="hidden space-x-8 sm:flex">
-            <button
-              type="button"
-              className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
-              id="horizontal-alignment-item-3"
-              data-hs-tab="#horizontal-alignment-3"
-              aria-controls="horizontal-alignment-3"
-              role="tab"
-            >
-              Shopping
-            </button>
+              <button
+                type="button"
+                className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
+                id="horizontal-alignment-item-3"
+                data-hs-tab="#horizontal-alignment-3"
+                aria-controls="horizontal-alignment-3"
+                role="tab"
+              >
+                Shopping
+              </button>
             </div>
             <div className="hidden space-x-8 sm:flex">
-            <button
-              type="button"
-              className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
-              id="horizontal-alignment-item-3"
-              data-hs-tab="#horizontal-alignment-3"
-              aria-controls="horizontal-alignment-3"
-              role="tab"
-            >
-              Lifestyle
-            </button>
+              <button
+                type="button"
+                className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
+                id="horizontal-alignment-item-3"
+                data-hs-tab="#horizontal-alignment-3"
+                aria-controls="horizontal-alignment-3"
+                role="tab"
+              >
+                Lifestyle
+              </button>
             </div>
             <div className="hidden space-x-8 sm:flex">
-            <button
-              type="button"
-              className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
-              id="horizontal-alignment-item-3"
-              data-hs-tab="#horizontal-alignment-3"
-              aria-controls="horizontal-alignment-3"
-              role="tab"
-            >
-              Family
-            </button>
+              <button
+                type="button"
+                className="font-bold px-5 rounded-full hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4  inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap hover:text-amber-800 bg-amber-100 text-amber-900 active"
+                id="horizontal-alignment-item-3"
+                data-hs-tab="#horizontal-alignment-3"
+                aria-controls="horizontal-alignment-3"
+                role="tab"
+              >
+                Family
+              </button>
             </div>
           </nav>
         </div>
@@ -359,51 +373,31 @@ const Page = () => {
         {
           <div>
             {listBlog.map((data: any, index) => (
-              <div
-              className="py-2"
-               key={index + 1}>
+              <div className="py-2" key={index + 1}>
                 <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
                   <h1 className="sm:text-3xl text-2xl font-bold title-font mb-2 text-amber-900">
-                    {data.title}
+                    {data.categori}
                   </h1>
                 </div>
                 <div className="flex flex-wrap -m-4">
-                  <div className="p-4 lg:w-1/2">
-                    <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                      <Image
-                        width={200}
-                        height={200}
-                        src={data.img}
-                        alt=""
-                      />
-                      <div className="flex-grow sm:pl-8">
-                        <h2 className="title-font font-medium text-lg text-gray-500">
-                          {data.date}
-                        </h2>
-                        <p className="mb-4">
-                          {data.description}
-                        </p>
+                  {data.listContent.map((content: any, index1: number) => (
+                    <div key={index1 + 1} className="p-4 lg:w-1/2">
+                      <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <Image
+                          width={200}
+                          height={200}
+                          src={content.img2}
+                          alt=""
+                        />
+                        <div className="flex-grow sm:pl-8">
+                          <h2 className="title-font font-medium text-lg text-gray-500">
+                            {content.date2}
+                          </h2>
+                          <p className="mb-4">{content.desc}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="p-4 lg:w-1/2">
-                    <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                      <Image
-                        width={200}
-                        height={200}
-                        src={data.img2}
-                        alt=""
-                      />
-                      <div className="flex-grow sm:pl-8">
-                        <h2 className="title-font font-medium text-lg text-gray-500">
-                          {data.date2}
-                        </h2>
-                        <p className="mb-4">
-                          {data.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             ))}
