@@ -16,7 +16,7 @@ const Page = () => {
           id: 1,
           img2: "/img/kuliner.jpeg",
           date2: "· 09 Aug 2022",
-          desc: "Suwatu by Mil and Bay: Lebih dari Sekadar Wiasata Kuliner",
+          desc: "Carney Co: Keunikan, Harga Menu, dan Lokasi",
         },
         {
           id: 2,
