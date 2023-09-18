@@ -1,16 +1,14 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 const Page = () => {
+  const [selectedTitle, setSelectedTitle] = useState("listContent");
+  const [listFiltered, setListFiltered] = useState<any[]>([]);
   const listBlog = [
     {
       id: 1,
       categori: "Culinary",
-      // img: "/img/kuliner.jpeg",
-      // date: "· 09 Aug 2022",
-      // description: "Carney Co: Keunikan, Harga Menu, dan Lokasi",
-      // href:"/detailartikel",
       listContent: [
         {
           id: 1,
@@ -29,9 +27,6 @@ const Page = () => {
     {
       id: 2,
       categori: "Travel",
-      // img: "/img/travel.jpeg",
-      // date: "· 09 Aug 2022",
-      // description: " Monumen Jogja Kembali: Daya Tarik, Sejarah, dan Harga Tiket",
       listContent: [
         {
           id: 3,
@@ -72,7 +67,7 @@ const Page = () => {
       listContent: [
         {
           id: 7,
-          img2: "/img/experience.jpeg",
+          img2: "/img/shoping.jpeg",
           date2: " · 24 Jun 2022",
           desc:
             "Bakpia Kukus Tugu Buka di PRJ 2022, Jangan Sampai Kelewatan!",
@@ -427,6 +422,7 @@ const Page = () => {
                 <div className="flex flex-wrap -m-4">
                   {data.listContent.map((content: any, index1: number) => (
                     <div key={index1 + 1} className="p-4 lg:w-1/2">
+                      <Link href={`/detailartikel/${content.id}`}>
                       <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                         <Image
                           width={200}
@@ -441,6 +437,7 @@ const Page = () => {
                           <p className="mb-4">{content.desc}</p>
                         </div>
                       </div>
+                      </Link>
                     </div>
                   ))}
                 </div>
