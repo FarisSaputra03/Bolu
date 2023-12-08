@@ -155,7 +155,7 @@ const Content = () => {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-8 mx-auto">
         <div className="flex  flex-col text-center w-full mb-20">
-          <h1 className=" text-1xl font-bold title-font mb-4 text-yellow-600">
+          <h1 className=" text-5xl sm:text-1xl font-bold title-font mb-4 text-yellow-600">
             OUR SIGNATURE BAKPIA KUKUS
           </h1>
         </div>
